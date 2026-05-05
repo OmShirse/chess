@@ -1,25 +1,27 @@
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((1080, 1080))
+screen = pygame.display.set_mode((800, 800))
+
+SQUARE_SIZE = 100
 
 running = True
 while running:
     screen.fill((255, 255, 255))
-    
-    for column in range(50,750,200):
-        for row in range(100,900,200):
-            pygame.draw.rect(screen, (0, 0, 0), (row, column, 100, 100))
-        for row in range(200,900,200):
-            pygame.draw.rect(screen, (180, 180, 180), (row, column, 100, 100))
 
-    for column in range(150,750,200):
-        for row in range(200,900,200):
-            pygame.draw.rect(screen, (0, 0, 0), (row, column, 100, 100))
-        for row in range(100,900,200):
-            pygame.draw.rect(screen, (180, 180, 180), (row, column, 100, 100))
+    for i in range(8):        
+        for j in range(8):    
+            x = j * SQUARE_SIZE
+            y = i * SQUARE_SIZE
+            if (i + j) % 2 == 0:
+                color = (0, 0, 0)
+            else:
+                color = (180, 180, 180)
+            pygame.draw.rect(screen, color, (x, y, SQUARE_SIZE, SQUARE_SIZE))
 
-for event in pygame.event.get():
+
+
+    for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
