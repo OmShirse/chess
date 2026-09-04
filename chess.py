@@ -360,13 +360,7 @@ class App(tk.Tk):
                     cv.create_rectangle(x1, y1, x2, y2, fill=CHK_COL, outline="")
                 elif self.selected and (row, col) == self.selected:
                     cv.create_rectangle(x1, y1, x2, y2, fill=SEL_COL, outline="")
-                elif (row, col) in self.moves:
-                    if g.board[row][col]:
-                        cv.create_rectangle(x1, y1, x2, y2, fill=CAP_COL, outline="")
-                    else:
-                        r  = SQ // 5
-                        cx = x1 + SQ//2; cy = y1 + SQ//2
-                        cv.create_oval(cx-r, cy-r, cx+r, cy+r, fill="#444444", outline="")
+
 
         # ── Coordinates ────────────────────────────────────────────────────────
         for i in range(8):
