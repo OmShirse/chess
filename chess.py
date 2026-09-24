@@ -200,13 +200,7 @@ class Chess:
         return b
 
     def legal_moves(self, r, c):
-        raw = self.raw_moves(r, c, self.board, self.turn, self.ep)
-        result = []
-        for (tr, tc) in raw:
-            nb = self.apply(self.board, r, c, tr, tc, self.turn, self.ep)
-            if not self.in_check(self.turn, nb, self.ep):
-                result.append((tr, tc))
-        return result
+        return self.raw_moves(r, c, self.board, self.turn, self.ep)
 
     def push(self, fr, fc, tr, tc):
         """Execute a validated move and update scores."""
@@ -240,6 +234,13 @@ class Chess:
 
         self.board = self.apply(self.board, fr, fc, tr, tc, self.turn, self.ep)
         self.ep    = new_ep
+        
+        if victim and victim.upper() == 'K':
+            winner = "White" if self.turn == 'w' else "Black"
+            self.status = f"King captured! {winner} wins!  (R=restart)"
+            self.over = True
+            return
+            
         self.turn  = 'b' if self.turn == 'w' else 'w'
         self._update_status()
 

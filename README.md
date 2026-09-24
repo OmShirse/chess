@@ -1,31 +1,18 @@
-# ♟️ Chess Game (Python + Pygame)
+# ♟️ Chess Game (Python + Tkinter)
 
-A simple chessboard project built using Python and Pygame.
-Focused on rendering a clean 8×8 board and setting up the base for future game logic.
+A fully featured chessboard project built using Python and Tkinter. 
+No external dependencies required!
 
 ---
 
 ## 🚀 Run
 
 ```bash
-pip install pygame
 python chess.py
 ```
 
----
-
 ## 🎯 Features
+* Full chess rules (castling, en passant, promotion)
+* Check, checkmate, stalemate detection
+* Scoring and timed mode
 
-* Chessboard UI
-* Grid-based layout
-* Basic game loop
-
----
-
-## 📌 Note
-
-This project is a starting point and will be expanded with full chess mechanics.
-
----
-
-⭐ Star the repo if you like it
