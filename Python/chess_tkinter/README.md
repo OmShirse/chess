@@ -15,3 +15,4 @@ python chess.py
 * Full chess rules (castling, en passant, promotion)
 * Check, checkmate, stalemate detection
 * Scoring and timed mode
+
