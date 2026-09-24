@@ -1,0 +1,14 @@
+{
+  "folders": [
+    { "path": "Python" },
+    { "path": "C" },
+	{ "path": "Herb's Magic"},
+	{ "path": "Rust"}
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true
+    }
+  }
+}

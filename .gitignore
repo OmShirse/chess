@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.ihx
+*.bin
+.vscode/*.log
+target/
+build/
+.espressif/
