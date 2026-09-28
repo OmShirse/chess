@@ -1,3 +1,0 @@
-fn useless(void) -> void {
-    
-}

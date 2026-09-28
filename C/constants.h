@@ -1,7 +1,0 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
-
-#define PI 3.14159265359
-#define PLANCK_CONSTANT 6.62607015e-34
-
-#endif

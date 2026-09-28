@@ -1,6 +1,0 @@
-__pycache__/
-*.pyc
-build/
-*.o
-*.elf
-.vscode/*.log
