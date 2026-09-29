@@ -1,8 +1,34 @@
+# Python cache
 __pycache__/
 *.pyc
+
+# C build artifacts
 *.ihx
 *.bin
-.vscode/*.log
+*.rel
+*.asm
+*.lst
+*.rst
+*.sym
+*.lk
+*.map
+
+# IDE
+.vscode/
+
+# Build / target directories
 target/
 build/
 .espressif/
+
+# ── Sub-repos / unrelated project directories ──
+# These are separate git repos or belong to different projects.
+# They appear here locally but should NOT be tracked by this chess repo.
+C/
+Python/
+Rust/
+Site/
+Herb's Magic/
+OmkarShirse.github.io/
+obsidian_cozy_journal/
+agy_daily_updater.py
